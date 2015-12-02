@@ -1,0 +1,1 @@
+This app was made by Brandon In, Hongzhou Lin and Sabid Rahman for the Agriculture Hackathon at UC Davis December 2nd, 2015.
