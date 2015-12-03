@@ -48,8 +48,9 @@
 				</select>
 				Crowdfund
 				<div ng-show="goal" class="row">
-					<input type="text" class="col-lg-6" placeholder="Goal Amount" ng-model="new_crowdfund.goal">
-					<input type="text" class="col-lg-6" placeholder="Location" ng-model="new_crowdfund.Location">
+                    <input type="text" class="col-lg-4" placeholder="Goal Amount" ng-model="new_crowdfund.goal">
+					<input type="text" class="col-lg-4" placeholder="Initial Amount" ng-model="new_crowdfund.current_amount">
+					<input type="text" class="col-lg-4" placeholder="Location" ng-model="new_crowdfund.Location">
 				</div>
 			</h4>
 			<textarea placeholder="I want Organic Johnny Apple Seed..." rows="4" cols="68" ng-model="new_crowdfund.description"></textarea>

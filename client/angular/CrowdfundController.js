@@ -1,6 +1,7 @@
 app.controller("CrowdfundController", function($scope, CrowdfundFactory) {
 	CrowdfundFactory.getCrowdfunds(function (data) {
 		$scope.crowdfunds = data;
+		console.log($scope.crowdfunds)
 	});
 	$scope.addCrowdfund = function() {
 		CrowdfundFactory.addCrowdfund($scope.new_crowdfund, function() {

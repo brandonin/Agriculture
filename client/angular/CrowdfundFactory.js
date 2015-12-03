@@ -4,6 +4,7 @@ app.factory('CrowdfundFactory', function($http) {
 	var errors, goal = false;
 	factory.getCrowdfunds = function(callback) {
 		$http.get('/crowdfunds').success(function(output){
+			console.log(output)
 			users = output;
 			callback(users);
 		});
@@ -20,9 +21,8 @@ app.factory('CrowdfundFactory', function($http) {
 		} else if(info.name2 == "Chemical"){ 
 			info.image = "http://agrodaily.com/wp-content/uploads/2015/11/DuPont-logo.jpg"
 		}
-		console.log(info)
 		$http.post('/addCrowdFunding', info).success(function (output) {
-			crowdfunds.push({name: info.name, goal: info.goal, image: info.image, description: info.description, created_at: new Date(), updated_at: new Date()})
+			crowdfunds.push({name: info.title, goal: info.goal, image: info.image, description: info.description, created_at: new Date(), updated_at: new Date()})
 		});
 	}	
 	factory.crowdfund_option = function (info, callback) {

@@ -165,8 +165,9 @@ module.exports = function(app, connectionpool) {
             });
         } else {
 			console.log(req.body);
-			var query = "INSERT INTO c_funding(??,??,??,??,??,??) values (?, ?, ?, ?, ?,?)";
-			var table = ["title", "goal", "current_amount", "created", "updated","descrip",req.body.title,req.body.goal,req.body.current_amount,req.body.created,req.body.updated,req.body.descrip];
+            req.body.title = req.body.name1 +" "+ req.body.name2;
+			var query = "INSERT INTO c_funding(??,??,??,??,??,??, ??) values (?, ?, ?, ?, ?,?, ?)";
+			var table = ["title", "goal", "current_amount", "created", "updated","descrip", "image",req.body.title,req.body.goal,req.body.current_amount,new Date(),new Date(),req.body.description, req.body.image];
 			query = mysql.format(query,table);
             connection.query(query, function(err, rows, fields) {
                 if (err) {
