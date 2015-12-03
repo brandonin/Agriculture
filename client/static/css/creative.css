@@ -3,6 +3,145 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+/* Remove rounded borders from list */
+.right {
+    margin-left: 82.5%;
+}
+textarea{
+    color:black;
+}
+.main_content {
+    width: 40em;
+    margin: 8em auto;
+}
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+​
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+​
+/* Remove border and add padding to thumbnails */
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+    width: 80%;
+    height: 80%;
+}
+​
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+​
+/* Black buttons with extra padding and without rounded borders */
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+​
+/* On hover, the color of .btn will transition to white with black text */
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+.product {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+    display: inline-block;
+}
+.product:hover {
+    border-color: #f1f1f1;
+}
+.carousel-inner img {
+   /* -webkit-filter: grayscale(90%);*/
+    /*filter: grayscale(90%);  make all photos black and white  */
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+​
+.carousel-caption h3 {
+    color: #fff !important;
+}
+​
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+.browser{
+    /*height:20em;*/
+    background-color: rgba(255,255,255, 1);
+    width:50%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: black;
+}
+./*browser ul{
+    list-style-type: none;
+    display: inline;
+    width: 33%;
+    float: left;
+}*/
+.browser>ul>a:hover{
+    background-color: black;
+
+}
+
+.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background:#fff;
+}
+.dropdown {
+    /*background:#fff;*/
+    width:200px;    
+}
+.dropdown-menu>li>a {
+    color:#428bca;
+}
+.dropdown ul.dropdown-menu {
+    border-radius:4px;
+    box-shadow:none;
+    margin-top:20px;
+    width:300px;
+}
+.dropdown ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    z-index: 9;
+}
 .blue {
 
     background-color: linear-gradient(to left, #50C9C3 , #96DEDA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}

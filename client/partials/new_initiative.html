@@ -29,19 +29,22 @@
             </div>
         </div>
     </div>
-    <header>
-        <div class="header-content">
-            <div class="browser">
-                 <input ng-model="filter_name" class="form-control" type="text" placeholder="Search for Initiatives">
-            </div>
-        </div>
-    </header>
-       <ul ng-repeat="crowdfund in crowdfunds | filter: filter_name">
-            <li>
-                <li><img class="controlled-stuff" data-ng-src="{{crowdfund.image}}"></li>
-                <h4><li ng-bind="crowdfund.name"></li></h4>
-                <h4><li>{{crowdfund.description}}</li></h4>
-                <h4><li>{{crowdfund.amount}}</li></h4>
-            </li>
-       </ul>
+    <div class="main_content">
+		<h4>
+			I want to start a 
+			<input type="text" placeholder="Apple" ng-model="new_crowdfund.name1">
+			<select ng-model="new_crowdfund.name2">
+				<option>Seed</option>
+				<option>Equipment</option>
+				<option>Nursery</option>
+				<option>Fertilzer</option>
+				<option>Chemical</option>
+			</select>
+			Crowdfund
+		</h4>
+		<textarea placeholder="I want Organic Johnny Apple Seed..." rows="4" cols="68"></textarea>
+			<button class="btn btn-primary right" ng-click="addCrowdfund()">
+				Purchase
+			</button>
+    </div>
 </div>
