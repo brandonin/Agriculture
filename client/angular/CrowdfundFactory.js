@@ -21,7 +21,7 @@ app.factory('CrowdfundFactory', function($http) {
 			info.image = "http://agrodaily.com/wp-content/uploads/2015/11/DuPont-logo.jpg"
 		}
 		console.log(info)
-		$http.post('/addCrowdfund', info).success(function (output) {
+		$http.post('/addCrowdFunding', info).success(function (output) {
 			crowdfunds.push({name: info.name, goal: info.goal, image: info.image, description: info.description, created_at: new Date(), updated_at: new Date()})
 		});
 	}	

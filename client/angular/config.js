@@ -17,9 +17,10 @@ app.config(function ($routeProvider) {
     .when('/myInitiatives',{
         templateUrl: 'partials/myInitiatives.html'
     })
-    
     .when('/maps',{
         templateUrl: 'partials/maps.html'
     })
-
+    .when('/about',{
+        templateUrl: 'partials/about.html'
+    })
 });

@@ -27,7 +27,9 @@ textarea{
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
-​
+​div .carousel-caption h3 {
+    font-size: 45px !important;
+}
 /* Remove border and add padding to thumbnails */
 .thumbnail {
     padding: 0 0 15px 0;
@@ -72,7 +74,15 @@ textarea{
    /* -webkit-filter: grayscale(90%);*/
     /*filter: grayscale(90%);  make all photos black and white  */
     width: 100%; /* Set width to 100% */
-    margin: auto;
+    margin:0px;
+    height: 500px;
+}
+.carousel-inner{
+    /*-webkit-filter: grayscale(90%);*/
+    /*filter: grayscale(90%);  make all photos black and white  */
+    width: 100%; /* Set width to 100% */
+    margin-top:2.4em;
+    height: 500px;
 }
 ​
 .carousel-caption h3 {
