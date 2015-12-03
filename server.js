@@ -1,19 +1,30 @@
-// require express so that we can build an express app
-var express = require('express');
-// require path so that we can use path stuff like path.join
-var path = require('path');
-var bodyParser = require('body-parser');
-// instantiate the app
+var express = require("express");
+var path = require("path");
 var app = express();
-// set up a static file server that points to the "client" directory
-app.use(bodyParser.json());
+var bodyParser= require("body-parser");
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "./client")));
 
-// require('./server/config/mongoose.js');
-// require('./server/config/routes.js')(app);
+var mysql      = require('mysql');
 
-
-app.use(express.static(path.join(__dirname, './client')));
-app.listen(process.env.PORT || 8888, function(){
-console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+var connectionpool = mysql.createPool({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'root',
+  database : 'agriculture'
 });
+
+//require('./server/config/sql.js');
+require('./server/config/routes.js')(app, connectionpool);
+
+
+var server = app.listen(8888, function() {
+ console.log("listening on port 8888");
+});
+
+var io = require('socket.io').listen(server)  // notice we pass the server object<br>
+
+io.sockets.on('connection', function (socket) {
+
+})
