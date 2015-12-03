@@ -187,11 +187,13 @@ aside {
 }
 header {
     position: relative;
+    top: 3.6em;
     width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(./../img/TAX.GIF);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./../img/agriculture.jpg);
+    /*background-image: url(./../img/agriculture.jpg);*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
