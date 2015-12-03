@@ -22,5 +22,8 @@ app.config(function ($routeProvider) {
     })
     .when('/about',{
         templateUrl: 'partials/about.html'
+    })    
+    .when('/microfund',{
+        templateUrl: 'partials/microfund.html'
     })
 });

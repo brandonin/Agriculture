@@ -4,6 +4,22 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 /* Remove rounded borders from list */
+.controlled-stuff{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+.list-style{
+    list-style-type: none;
+}
+.bolded {
+    font-size: 36px;
+    font-weight: 700;
+}
+.green {
+    color: green;
+}
+
 #map {
   height: 85%;
   width: 100%;
@@ -157,8 +173,10 @@ textarea{
     z-index: 9;
 }
 .blue {
-
     background-color: linear-gradient(to left, #50C9C3 , #96DEDA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+.blue_color {
+    color: #50C9C3; /* fallback for old browsers */
+}
 html,
 body {
     width: 100%;
@@ -287,12 +305,12 @@ aside {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: #fb7240;
+        border-color: green;
         background-color: transparent;
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: #fb7240;
+        color: green;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -302,7 +320,7 @@ aside {
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: #fb7240;
+        color:green;
     }
 
     .navbar-default .nav > li>a:hover,
