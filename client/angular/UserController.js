@@ -4,6 +4,7 @@ app.controller("UserController", function($scope, UserFactory) {
 	});
 	$scope.addUser = function() {
 		UserFactory.addUser($scope.new_user, function(errs) {
+			console.log($scope.new_user)
 			if(errs){
 				$scope.errors = errs;
 			} else {

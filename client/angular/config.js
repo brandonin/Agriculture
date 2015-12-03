@@ -14,4 +14,12 @@ app.config(function ($routeProvider) {
     .when('/new_initiative',{
         templateUrl: 'partials/new_initiative.html'
     })
+    .when('/myInitiatives',{
+        templateUrl: 'partials/myInitiatives.html'
+    })
+    
+    .when('/maps',{
+        templateUrl: 'partials/maps.html'
+    })
+
 });

@@ -20,9 +20,9 @@
                       <ul class="dropdown-menu">
                         <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a href="#">My Initiatives <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                        <li><a href="#/myInitiatives">My Initiatives <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                        <li><a href="#/">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
                       </ul>
                     </li>
                 </ul>
@@ -30,21 +30,32 @@
         </div>
     </div>
     <div class="main_content">
-		<h4>
-			I want to start a 
-			<input type="text" placeholder="Apple" ng-model="new_crowdfund.name1">
-			<select ng-model="new_crowdfund.name2">
-				<option>Seed</option>
-				<option>Equipment</option>
-				<option>Nursery</option>
-				<option>Fertilzer</option>
-				<option>Chemical</option>
-			</select>
-			Crowdfund
-		</h4>
-		<textarea placeholder="I want Organic Johnny Apple Seed..." rows="4" cols="68"></textarea>
-			<button class="btn btn-primary right" ng-click="addCrowdfund()">
-				Purchase
-			</button>
+    	<button ng-click="crowdfund_initiate()" class="btn btn-success">CrowdFunding</button>
+		<button ng-click="microfund_initiate()" class="btn btn-success">MicroFunding</button>
+			<div ng-show="microfund">
+				<h4><i>Coming soon!</i></h4>
+			</div>
+			<div ng-show="crowdfund">
+			<h4>
+				I want to start a 
+				<input type="text" placeholder="Apple" ng-model="new_crowdfund.name1">
+				<select ng-model="new_crowdfund.name2" ng-change="crowdfund_option()">
+					<option>Seed</option>
+					<option>Equipment</option>
+					<option>Nursery</option>
+					<option>Fertilzer</option>
+					<option>Chemical</option>
+				</select>
+				Crowdfund
+				<div ng-show="goal" class="row">
+					<input type="text" class="col-lg-6" placeholder="Goal Amount" ng-model="new_crowdfund.goal">
+					<input type="text" class="col-lg-6" placeholder="Location" ng-model="new_crowdfund.Location">
+				</div>
+			</h4>
+			<textarea placeholder="I want Organic Johnny Apple Seed..." rows="4" cols="68" ng-model="new_crowdfund.description"></textarea>
+				<a href="#/dashboard" class="btn btn-primary right" ng-click="addCrowdfund()">
+					Purchase
+				</a>
+			</div>
     </div>
 </div>

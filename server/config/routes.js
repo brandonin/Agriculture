@@ -1,5 +1,4 @@
 module.exports = function(app, connectionpool) {
-	
 	app.get('/users', function(req,res){
     connectionpool.getConnection(function(err, connection) {
         if (err) {
@@ -83,7 +82,7 @@ module.exports = function(app, connectionpool) {
                 err:    err.code
             });
         } else {
-            connection.query('SELECT * FROM user', function(err, rows, fields) {
+            connection.query('INSERT INTO users', function(err, rows, fields) {
                 if (err) {
                     console.error(err);
                     res.statusCode = 500;
