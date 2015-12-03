@@ -8,10 +8,7 @@ app.config(function ($routeProvider) {
     .when('/about',{
         templateUrl: 'partials/about.html'
     })
-    .when('/login',{
-        templateUrl: 'partials/dashboard.html'
-    })
-    .when('/register',{
+    .when('/dashboard',{
         templateUrl: 'partials/dashboard.html'
     })
 });
