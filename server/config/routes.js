@@ -41,7 +41,6 @@ module.exports = function(app, connectionpool) {
                 err:    err.code
             });
         } else {
-			console.log(req.body.email);
             connection.query('SELECT * FROM user WHERE user.email=?',req.body.email, function(err, rows, fields) {
                 if (err) {
                     console.error(err);

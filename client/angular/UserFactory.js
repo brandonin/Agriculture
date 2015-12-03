@@ -1,11 +1,21 @@
 app.factory('UserFactory', function($http) {
 	var factory = {};
 	var users = [];
+	var current_user = [];
 	var errors;
 	factory.getUsers = function(callback) {
 		$http.get('/users').success(function(output){
 			users = output.json;
 			callback(users);
+		});
+	};
+	factory.getSingleUser = function(info, callback) {
+		$http.post('/singleUser', info).success(function(output){
+			current_user = output[0].user_id;
+			document.cookie="user_id="+current_user+";";
+			console.log(document.cookie, "goodbye")
+			callback(current_user);
+
 		});
 	};
 	factory.addUser = function(info, callback) {

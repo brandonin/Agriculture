@@ -26,4 +26,8 @@ app.controller("CrowdfundController", function($scope, CrowdfundFactory) {
 		$scope.microfund = true;
 		$scope.crowdfund = false;
 	}
+	$scope.updateFundingAmount = function (current_amount) {
+		console.log(current_amount)
+		// CrowdfundFactory.updateFundingAmount($scope.update_crowdfund)
+	}
 })

@@ -1,7 +1,11 @@
 app.controller("UserController", function($scope, UserFactory) {
-	UserFactory.getUsers(function (data) {
+	console.log(document.cookie, "hello");
+	$scope.getUser = function() {
+	UserFactory.getSingleUser($scope.user, function (data) {
+		console.log(data)
 		$scope.users = data;
 	});
+	};
 	$scope.addUser = function() {
 		UserFactory.addUser($scope.new_user, function(errs) {
 			console.log($scope.new_user)

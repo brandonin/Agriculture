@@ -10,7 +10,7 @@ app.factory('CrowdfundFactory', function($http) {
 		});
 	};
 	factory.addCrowdfund = function(info, callback) {
-		if(info.name2 == "seed") {
+		if(info.name2 == "Seed") {
 			info.image = "https://bbbseed.com/wp-content/uploads/2014/07/07.20.15-seeds.jpg"
 		} else if(info.name2 == "Equipment"){ 
 			info.image = "https://www.deere.com/common/media/images/product/tractors/row_crop_tractors/small_frame_series/7330/7330_tractor_459893_model_642x462.png"

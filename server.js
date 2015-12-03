@@ -19,12 +19,7 @@ var connectionpool = mysql.createPool({
 require('./server/config/routes.js')(app, connectionpool);
 
 
-var server = app.listen(8888, function() {
- console.log("listening on port 8888");
+app.listen(process.env.PORT || 8888, function(){
+console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
-var io = require('socket.io').listen(server)  // notice we pass the server object<br>
-
-io.sockets.on('connection', function (socket) {
-
-})
